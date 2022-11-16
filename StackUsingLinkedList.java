@@ -8,16 +8,28 @@ public class StackUsingLinkedList<T> {
 		 size=0;
 	 }
 	 
+	 
+	// Return the size of the stack
+	
 	 int size() {
 		return size;
 		 
 	 }
+	 
+	 //return top element of the stack
+	 
 	 T top() {
 		 return  head.data;
 	 }
+	 
+	 //check Empty OR NotEmpty
+	 
 	boolean isEmpty() {
 		return (size==0);
-	}
+	} 
+	
+	//push operation
+	 
 	public void push(T element) {
 		Node<T> newNode=new Node<T>(element);
 		if(size==0) {
@@ -29,7 +41,11 @@ public class StackUsingLinkedList<T> {
 			head=newNode;
 			size+=1;
 		}
-	}public T pop() {
+		
+	}
+	//POP operation 
+	
+	public T pop() {
 		
 		T res=head.data;
 		head=head.next;
